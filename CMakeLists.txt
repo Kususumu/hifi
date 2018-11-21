@@ -17,7 +17,7 @@ if (HIFI_ANDROID )
     )
 else()
     execute_process(
-        COMMAND ${HIFI_PYTHON_EXEC} ${CMAKE_CURRENT_SOURCE_DIR}/prebuild.py --build-root ${CMAKE_BINARY_DIR}
+        COMMAND ${HIFI_PYTHON_EXEC} ${CMAKE_CURRENT_SOURCE_DIR}/prebuild.py --build-root ${CMAKE_BINARY_DIR} --vcpkg-root ${VCPKG_ROOT}
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     )
     # squelch the Policy CMP0074 warning without requiring an update to cmake 3.12.
